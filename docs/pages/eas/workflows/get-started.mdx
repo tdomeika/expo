@@ -1,121 +1,162 @@
----
-title: Get started with EAS Workflows
-sidebar_title: Get started
-description: Learn how to use EAS Workflows to automate your React Native CI/CD development and release processes.
-searchRank: 10
----
+/project
+❯ npm install
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
 
-import { FileTree } from '~/ui/components/FileTree';
-import { Prerequisites, Requirement } from '~/ui/components/Prerequisites';
-import { Terminal } from '~/ui/components/Snippet';
-import { Step } from '~/ui/components/Step';
+added 806 packages in 19s
 
-This page walks you through the process of creating your first EAS Workflow for building and submitting your app to the app stores.
+71 packages are looking for funding
+  run `npm fund` for details
 
-## Get started
+~/project 20s
+❯ npm run dev
 
-<Prerequisites numberOfRequirements={4}>
-  <Requirement number={1} title="Sign up for an Expo account">
-    You'll need to [sign up](https://expo.dev/signup) for an Expo account.
-  </Requirement>
-  <Requirement number={2} title="Create a project">
-    You'll need to create a project with the following command:
+> bolt-expo-starter@1.0.0 dev
+> EXPO_NO_TELEMETRY=1 expo start
 
-    <Terminal cmd={['$ npx create-expo-app@latest --template default@sdk-55']} />
+Starting project at /home/project
+Starting Metro Bundler
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+█ ▄▄▄▄▄ █   █▄███▀▀ ▀▀█ ▄▄▄▄▄ █
+█ █   █ █ ▀▄ █▄▀  ▄▀ ▄█ █   █ █
+█ █▄▄▄█ █▀██▀▀  ▀▄ ▄▀▄█ █▄▄▄█ █
+█▄▄▄▄▄▄▄█▄▀▄█ █ █▄▀ ▀ █▄▄▄▄▄▄▄█
+█▄▄▀█  ▄██▀▀▄▀▄▄▄█ ▀█▄█▀ ▀ ▄  █
+██▀ ▄▀ ▄▀▄█▀ ▄ ▄▄▄ ▄▀▄▀▄▀▀█▄  █
+█▄▀█▀▄█▄ ██▄█▄ ▀▀ ▄█▄▀▄▀▄▀▄█▀▀█
+██▀   █▄█▄▄ █▀█▀ █ ▄▀█ ███▄▄▀ █
+█ ▄▄█▄█▄▀▄▀▀▄▀▄▄▀▀▄▀▄█▀▀▀▀▄█▀ █
+█████▄▄▄ ▄ █ ▄ ▄ ▄  █▄ ▀ █▄▄█ █
+█▄▄███▄▄▄▀█ █▄ ▀▀▀ █▀ ▄▄▄ █▀▄▀█
+█ ▄▄▄▄▄ █▀ ▄█▀█▀▄▄ █  █▄█ ▀█▀▄█
+█ █   █ █▄ ▄▄▀▄▄ █▄█ ▄ ▄ ▄▀▀█▀█
+█ █▄▄▄█ █▀██ ▄ ▄▄█ █▀▀▀▀ ▀▀█  █
+█▄▄▄▄▄▄▄█▄▄██▄▄█▄█▄██▄█▄▄█▄█▄██
 
-  </Requirement>
-  <Requirement number={3} title="Sync the project with EAS">
-    You'll need to sync the project with EAS with the following command. This will create an EAS project and link it to your local project:
+› Metro waiting on exp://4pn0e9fj8rrir3o.boltexpo.dev
+› Scan the QR code above with Expo Go (Android) or the Camera app (iOS)
 
-    <Terminal cmd={['$ npx eas-cli@latest init']} />
+› Web is waiting on http://4pn0e9fj8rrir3o.boltexpo.dev
 
-  </Requirement>
-  <Requirement number={4} title="Add eas.json">
-    You'll need to add an `eas.json` file to the root of your project if it doesn't already exist:
+› Using Expo Go
+› Press s │ switch to development build
 
-    <Terminal cmd={['$ touch eas.json && echo "{}" > eas.json']} />
+› Press a │ open Android
+› Press w │ open web
 
-  </Requirement>
-</Prerequisites>
+› Press j │ open debugger
+› Press r │ reload app
+› Press m │ toggle menu
+› shift+m │ more tools
+› Press o │ open project code in your editor
 
-<Step label="1">
-  Create a directory named **.eas/workflows** at the root of your project with a YAML file inside of
-  it. For example: **.eas/workflows/create-production-builds.yml**.
+› Press ? │ show all commands
 
-  <FileTree
-  files={[
-    ['my-app/.eas/workflows/create-production-builds.yml', ''],
-    ['my-app/eas.json', ''],
-  ]}
-/>
-</Step>
+Logs for your project will appear below. Press Ctrl+C to exit.
+| [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+| [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+| [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+| Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+|   npx update-browserslist-db@latest
+|   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Web Bundled 83732ms node_modules/expo-router/entry.js (807 modules)
+ LOG  [web] Logs will appear in the browser console
+Web Bundled 2238ms node_modules/expo-router/entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+Web Bundled 1583ms node_modules/expo-router/entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+Web Bundled 1488ms node_modules/expo-router/entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+Web Bundled 1472ms node_modules/expo-router/entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+Web node_modules/expo-router/entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
 
-<Step label="2">
 
-Add the following YAML to the `create-production-builds.yml` file:
+~/project
+❯ npm install
 
-```yaml .eas/workflows/create-production-builds.yml
-name: Create Production Builds
+added 1 package in 6s
 
-jobs:
-  build_android:
-    type: build # This job type creates a production build for Android
-    params:
-      platform: android
-  build_ios:
-    type: build # This job type creates a production build for iOS
-    params:
-      platform: ios
-```
+71 packages are looking for funding
+  run `npm fund` for details
 
-The workflow above will create a production build for Android and iOS in parallel. To run this workflow successfully, you'll need to [set up and build your project using EAS CLI](/build/setup/) first.
+~/project 7s
+❯ npm run dev
 
-</Step>
+> bolt-expo-starter@1.0.0 dev
+> EXPO_NO_TELEMETRY=1 expo start
 
-<Step label="3">
+env: load .env
+env: export EXPO_PUBLIC_SUPABASE_URL EXPO_PUBLIC_SUPABASE_ANON_KEY
+Starting project at /home/project
+Starting Metro Bundler
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+█ ▄▄▄▄▄ █   █▄███▀▀ ▀▀█ ▄▄▄▄▄ █
+█ █   █ █ ▀▄ █▄▀  ▄▀ ▄█ █   █ █
+█ █▄▄▄█ █▀██▀▀  ▀▄ ▄▀▄█ █▄▄▄█ █
+█▄▄▄▄▄▄▄█▄▀▄█ █ █▄▀ ▀ █▄▄▄▄▄▄▄█
+█▄▄▀█  ▄██▀▀▄▀▄▄▄█ ▀█▄█▀ ▀ ▄  █
+██▀ ▄▀ ▄▀▄█▀ ▄ ▄▄▄ ▄▀▄▀▄▀▀█▄  █
+█▄▀█▀▄█▄ ██▄█▄ ▀▀ ▄█▄▀▄▀▄▀▄█▀▀█
+██▀   █▄█▄▄ █▀█▀ █ ▄▀█ ███▄▄▀ █
+█ ▄▄█▄█▄▀▄▀▀▄▀▄▄▀▀▄▀▄█▀▀▀▀▄█▀ █
+█████▄▄▄ ▄ █ ▄ ▄ ▄  █▄ ▀ █▄▄█ █
+█▄▄███▄▄▄▀█ █▄ ▀▀▀ █▀ ▄▄▄ █▀▄▀█
+█ ▄▄▄▄▄ █▀ ▄█▀█▀▄▄ █  █▄█ ▀█▀▄█
+█ █   █ █▄ ▄▄▀▄▄ █▄█ ▄ ▄ ▄▀▀█▀█
+█ █▄▄▄█ █▀██ ▄ ▄▄█ █▀▀▀▀ ▀▀█  █
+█▄▄▄▄▄▄▄█▄▄██▄▄█▄█▄██▄█▄▄█▄█▄██
 
-Finally, run the workflow with the following command:
+› Metro waiting on exp://4pn0e9fj8rrir3o.boltexpo.dev
+› Scan the QR code above with Expo Go (Android) or the Camera app (iOS)
 
-<Terminal cmd={['$ npx eas-cli@latest workflow:run create-production-builds.yml']} />
+› Web is waiting on http://4pn0e9fj8rrir3o.boltexpo.dev
 
-Once you do, you can see your workflow running on your project's [workflows page](https://expo.dev/accounts/[account]/projects/[projectName]/workflows).
+› Using Expo Go
+› Press s │ switch to development build
 
-</Step>
+› Press a │ open Android
+› Press w │ open web
 
-## More
+› Press j │ open debugger
+› Press r │ reload app
+› Press m │ toggle menu
+› shift+m │ more tools
+› Press o │ open project code in your editor
 
-### Automate workflows with GitHub events
+› Press ? │ show all commands
 
-You can trigger a workflow by pushing a commit to your GitHub repository. You can link a GitHub repo to your EAS project with the following steps:
-
-- Navigate to your project's [GitHub settings](https://expo.dev/accounts/%5Baccount%5D/projects/%5BprojectName%5D/github).
-- Follow the UI to install the GitHub app.
-- Select the GitHub repository that matches the Expo project and connect it.
-
-Then, add the [`on` trigger](/eas/workflows/syntax/#on) to your workflow file. For example, if you want to trigger the workflow when a commit is pushed to the `main` branch, you can add the following:
-
-```yaml .eas/workflows/create-production-builds.yml
-name: Create Production Builds
-
-# @info #
-on:
-  push:
-    branches: ['main']
-  # @end #
-
-  jobs:
-    build_android:
-      type: build
-      params:
-        platform: android
-    build_ios:
-      type: build
-      params:
-        platform: ios
-```
-
-### VS Code extension
-
-Download the [Expo Tools VS Code extension](https://marketplace.visualstudio.com/items?itemName=expo.vscode-expo-tools) to get descriptions and autocompletions for your workflow files.
-
-> Got feedback or feature requests? Send us an email at workflows@expo.dev.
+Logs for your project will appear below. Press Ctrl+C to exit.
+| [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+| [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+| [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+Web Bundled 86767ms node_modules/expo-router/entry.js (2564 modules)
+ LOG  [web] Logs will appear in the browser console
+Web Bundled 5067ms node_modules/expo-router/entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+Web Bundled 4078ms node_modules/expo-router/entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+Web Bundled 4172ms node_modules/expo-router/entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+Web Bundled 3727ms node_modules/expo-router/entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+Web Bundled 4123ms node_modules/expo-router/entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+Web Bundled 3832ms node_modules/expo-router/entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+Web Bundled 3854ms node_modules/expo-router/entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+Web Bundled 3728ms node_modules/expo-router/entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+Web Bundled 3813ms node_modules/expo-router/entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+Web Bundled 4008ms node_modules/expo-router/entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+Web Bundled 3697ms node_modules/expo-router/entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
+Web Bundled 4282ms node_modules/expo-router/entry.js (1 module)
+ LOG  [web] Logs will appear in the browser console
